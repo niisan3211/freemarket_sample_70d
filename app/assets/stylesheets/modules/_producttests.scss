@@ -101,6 +101,43 @@ p.sentence {
       }
     }
   }
+  // ↓JSの実装に合わせて新規にコード記入しています
+  .images_aera {
+    width: 620px;
+    height: 150px;
+    background-color: $gray_color;
+    // background-color: $white_color;
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    &__addfiles {
+      width: 124px;
+      height: 150px;
+      background-color: $gray_color;
+      margin-right: 2px;
+      &__file {
+        width: 124px;
+        height: 150px;
+        background-color: $gray_color;
+        margin-right: 2px;
+        &__content {
+          height: 118px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid $lightgray_color;
+        }
+        &__delete {
+          height: 32px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+  // ↑JSの実装でコード追加した部分
+
   // ↑出品画像の部分
   // ↓商品名の部分
   &__info {
