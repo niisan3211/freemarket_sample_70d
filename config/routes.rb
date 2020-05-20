@@ -28,12 +28,13 @@ Rails.application.routes.draw do
   end  
   # ↑5/16スプリントレビュー後は削除
 
-  resources :products, only: [:index, :new, :create, :edit, :show] do
+  resources :products, only: [:index, :new, :create, :show, :edit, :update] do
     # 上記のproductsの最後にあるdoも5/16スプリントレビュー後は削除
     # ↓も5/16スプリントレビュー用
     collection do
       get 'testshow'
       get 'testconfirm'
+      get 'buy'
     end
   end  
 end
