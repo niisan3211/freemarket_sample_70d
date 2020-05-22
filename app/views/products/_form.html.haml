@@ -20,40 +20,63 @@
         -#   %p.showing__images__file--operation_text
         -#     クリックしてファイルをアップロード
         -# ↑マークアップ実装時のコード参考用にコメントアウト
+        -# 
+        -# 
+        .showing__images__file
+          .previews
+            - if @product.persisted?
+              - @product.images.each_with_index do |image, i|
+                .previews__image
+                  .previews__image__box
+                    = image_tag image.image.url, data: {image: { index: i }}, width: "100", height: '100'
+                  .previews__image__btn削除する
+          -# .second_area
+          -#   セカンド
+          %label.input_box
+            = f.fields_for :images do |image|
+              .input_box__upload
+                = image.file_field :image, class: "input_box__upload__field"
+                = icon('fas','camera fa-2x')
+
+
+        -# 
+        -# 
         -# ↓２回目のメルカリ用HTML
-        .item_input
-          .item_input__body
-            .up-image
-              = f.fields_for :images do |image|
-                .up-image__group
-                  .previews
-                    - if @product.persisted?
-                      - @product.images.each.with_index(1) do |image, i|
-                        - next if i >=6
-                        .preview.preview_saved{{data:{name: i}},{data:{index: i}}}
-                          .img_box
-                            = image_tag image.image.url, data: {index: i}, class: "preview_image"
-                          .preview_btn
-                            削除
-                    %label.item_imgs
-                      .up-image__group__dropbox{data: {index: 1}}
-                        = image.file_field :image, class: "item_imgs__default", id: "up_img_last", type: 'file', multiple: true, accept: "image/*"
-                      - if @product.persisted?
-                        = f.fields_for :images do |image|
-                          = image.check_box :_destroy, data:{index: image.index + 1}, class: 'hidden-destroy'
-            .under_group
-              .up-image__group_2nd_row
-                .previews_2nd_row
-                  - if @product.persisted?
-                    - @product.images.each.with_index(1) do |image, i|
-                      - next if i <= 5
-                      .preview.preview_saved{{data:{name: i}},{data:{index: i}}}
-                        .img_box
-                          = image_tag image.image.url, data: {index: i}, class: "preview_image"
-                      .preview_btn
-                        削除
-                  %label.item_imgs_2nd_row
-                      
+        -# .item_input
+        -#   .item_input__body
+        -#     .up-image
+        -#       = f.fields_for :images do |image|
+        -#         .up-image__group
+        -#           .previews
+        -#             - if @product.persisted?
+        -#               - @product.images.each.with_index(1) do |image, i|
+        -#                 - next if i >=6
+        -#                 .preview.preview_saved{{data:{name: i}},{data:{index: i}}}
+        -#                   .img_box
+        -#                     = image_tag image.image.url, data: {index: i}, class: "preview_image"
+        -#                   .preview_btn
+        -#                     削除
+        -#             %label.item_imgs
+        -#               .up-image__group__dropbox{data: {index: 1}}
+        -#                 = image.file_field :image, class: "item_imgs__default", id: "up_img_last", type: 'file', multiple: true, accept: "image/*"
+        -#               - if @product.persisted?
+        -#                 = f.fields_for :images do |image|
+        -#                   = image.check_box :_destroy, data:{index: image.index + 1}, class: 'hidden-destroy'
+        -#     .under_group
+        -#       .up-image__group_2nd_row
+        -#         .previews_2nd_row
+        -#           - if @product.persisted?
+        -#             - @product.images.each.with_index(1) do |image, i|
+        -#               - next if i <= 5
+        -#               .preview.preview_saved{{data:{name: i}},{data:{index: i}}}
+        -#                 .img_box
+        -#                   = image_tag image.image.url, data: {index: i}, class: "preview_image"
+        -#               .preview_btn
+        -#                 削除
+        -#           %label.item_imgs_2nd_row
+        -# 
+        -# 
+        -# 
 
 
 

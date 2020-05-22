@@ -86,7 +86,6 @@ p.sentence {
     // height: 300px;
     border-bottom: 1px solid $lightgray_color;
     padding: 40px;
-
     // &__file {
     //   width: 620px;
     //   height: 150px;
@@ -101,59 +100,102 @@ p.sentence {
     //     display: none;
     //   }
     // }
-    .item_input__body {
+    &__file {
+      width: 620px;
+      // 
       background-color: $gray_color;
-      // height: 150px;
-    }
-
-
-    .item_imgs {
-      height: 150px;
-      width: 100%;
-      input[type='file'] {
-        display: none;
-      }
-    }
-    .previews {
       display: flex;
-      height: 150px;
-    }
-    .preview{
-      height: 150px;
-      width: 120px;
-      .img_box{
-        height: 118px;
-        width: 100%;
+      align-items: center;
+      text-align: center;
+      
+      .previews {
+        background-color: gold;
         display: flex;
-        align-items: center;
-        .preview_image{
-          max-width: 120px;
-          max-height: 118px;
-          margin: 0 auto;
+        flex-wrap: wrap;
+        &__image {
+          width: 118px;
+          height: 150px;
+        }
+      }
+      // .second_area {
+      //   width: 120px;
+      //   height: 150px;
+      //   background-color: blue;
+      // }
+      .input_box {
+        width: 100%;
+        height: 150px;
+        background-color: yellowgreen;
+        &__upload {
+          // height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          &__field {
+            display: none;
+            
+          }
         }
       }
     }
-    .under_group{
-      background-color: $gray_color;
-      height: 150px;
-      // display: none;
-      &__group_2nd_row {
-        // 
-        height: 150px;
-        .previews_2nd_row {
-          // 
-          height: 150px;
-          .item_imgs_2nd_row {
-            background-color: gold;
-            height: 150px;
-            width: 100%;
-            input[type='file'] {
-              display: none;
-            }
-          } 
-        }
-      }
-      }
+
+    // .vanish {
+    //   content: "";
+    // }
+    // .item_input__body {
+    //   background-color: $gray_color;
+    //   // height: 150px;
+    // }
+
+
+    // .item_imgs {
+    //   height: 150px;
+    //   width: 100%;
+    //   input[type='file'] {
+    //     display: none;
+    //   }
+    // }
+    // .previews {
+    //   display: flex;
+    //   height: 150px;
+    // }
+    // .preview{
+    //   height: 150px;
+    //   width: 120px;
+    //   .img_box{
+    //     height: 118px;
+    //     width: 100%;
+    //     display: flex;
+    //     align-items: center;
+    //     .preview_image{
+    //       max-width: 120px;
+    //       max-height: 118px;
+    //       margin: 0 auto;
+    //     }
+    //   }
+    // }
+    // .under_group{
+    //   background-color: $gray_color;
+    //   height: 150px;
+    //   // display: none;
+    //   &__group_2nd_row {
+    //     // 
+    //     height: 150px;
+    //     .previews_2nd_row {
+    //       // 
+    //       height: 150px;
+    //       .item_imgs_2nd_row {
+    //         background-color: gold;
+    //         height: 150px;
+    //         width: 100%;
+    //         input[type='file'] {
+    //           display: none;
+    //         }
+    //       } 
+    //     }
+    //   }
+    //   }
     // label.item_imgs_2nd_row {
     //   background-color: gold;
     //   height: 150px;
