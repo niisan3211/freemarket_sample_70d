@@ -78,12 +78,10 @@ p.sentence {
 
 .showing {
   width: 700px;
-  height: 2210px;
   background-color: $white_color;
   margin: 0 auto;
   // ↓出品画像の部分
   &__images {
-    // height: 300px;
     border-bottom: 1px solid $lightgray_color;
     padding: 40px;
     // &__file {
@@ -107,21 +105,14 @@ p.sentence {
       display: flex;
       align-items: center;
       text-align: center;
-      
+      flex-wrap: wrap;
       .previews {
-        background-color: gold;
         display: flex;
         flex-wrap: wrap;
         &__image {
           width: 118px;
-          height: 150px;
         }
       }
-      // .second_area {
-      //   width: 120px;
-      //   height: 150px;
-      //   background-color: blue;
-      // }
       .input_box {
         width: 100%;
         height: 150px;
@@ -134,118 +125,14 @@ p.sentence {
           align-items: center;
           &__field {
             display: none;
-            
           }
         }
       }
     }
-
-    // .vanish {
-    //   content: "";
-    // }
-    // .item_input__body {
-    //   background-color: $gray_color;
-    //   // height: 150px;
-    // }
-
-
-    // .item_imgs {
-    //   height: 150px;
-    //   width: 100%;
-    //   input[type='file'] {
-    //     display: none;
-    //   }
-    // }
-    // .previews {
-    //   display: flex;
-    //   height: 150px;
-    // }
-    // .preview{
-    //   height: 150px;
-    //   width: 120px;
-    //   .img_box{
-    //     height: 118px;
-    //     width: 100%;
-    //     display: flex;
-    //     align-items: center;
-    //     .preview_image{
-    //       max-width: 120px;
-    //       max-height: 118px;
-    //       margin: 0 auto;
-    //     }
-    //   }
-    // }
-    // .under_group{
-    //   background-color: $gray_color;
-    //   height: 150px;
-    //   // display: none;
-    //   &__group_2nd_row {
-    //     // 
-    //     height: 150px;
-    //     .previews_2nd_row {
-    //       // 
-    //       height: 150px;
-    //       .item_imgs_2nd_row {
-    //         background-color: gold;
-    //         height: 150px;
-    //         width: 100%;
-    //         input[type='file'] {
-    //           display: none;
-    //         }
-    //       } 
-    //     }
-    //   }
-    //   }
-    // label.item_imgs_2nd_row {
-    //   background-color: gold;
-    //   height: 150px;
-    //   width: 100%;
-    //   input[type='file'] {
-    //     display: none;
-    //   }
-    // } 
-    // .item_imgs__default {
-    //   display: none;
-    // }
-
   }
-
-  // ↓JSの実装に合わせて新規にコード記入しています
-  // .images_aera {
-  //   width: 620px;
-  //   height: 150px;
-  //   background-color: $gray_color;
-  //   // background-color: $white_color;
-  //   font-size: 12px;
-  //   display: flex;
-  //   justify-content: flex-start;
-  //   text-align: center;
-  //   &__addfiles {
-  //     width: 124px;
-  //     height: 150px;
-  //     background-color: $gray_color;
-  //     margin-right: 2px;
-  //     &__file {
-  //       width: 124px;
-  //       height: 150px;
-  //       background-color: $gray_color;
-  //       margin-right: 2px;
-  //       &__content {
-  //         height: 118px;
-  //         display: flex;
-  //         flex-direction: column;
-  //         justify-content: center;
-  //         align-items: center;
-  //         border-bottom: 1px solid $lightgray_color;
-  //       }
-  //       &__delete {
-  //         height: 32px;
-  //         line-height: 32px;
-  //       }
-  //     }
-  //   }
-  // }
-  // ↑JSの実装でコード追加した部分
+  .hidden-destroy {
+    display: none;
+  }
 
   // ↑出品画像の部分
   // ↓商品名の部分

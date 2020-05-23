@@ -28,15 +28,17 @@
               - @product.images.each_with_index do |image, i|
                 .previews__image
                   .previews__image__box
-                    = image_tag image.image.url, data: {image: { index: i }}, width: "100", height: '100'
-                  .previews__image__btn削除する
-          -# .second_area
-          -#   セカンド
+                    = image_tag image.image.url, data: {image: {index: :i }}, width: "100", height: '100'
+                  .previews__image__btn{data: {btn: {index: i}}}
+                    削除する
           %label.input_box
             = f.fields_for :images do |image|
-              .input_box__upload
+              .input_box__upload{data: {index: "#{image.index}"}}
                 = image.file_field :image, class: "input_box__upload__field"
                 = icon('fas','camera fa-2x')
+                = f.fields_for :item_imgs do |image|
+                  = image.check_box :_destroy, data:{index: image.index}, class: 'hidden-destroy'
+
 
 
         -# 
