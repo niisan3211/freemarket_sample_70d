@@ -111,26 +111,33 @@ p.sentence {
         flex-wrap: wrap;
         &__image {
           width: 118px;
+          border: 1px solid $white;
+          &__box {
+            border-bottom: 1px solid $lightgray_color;
+          }
         }
       }
       .input_box {
         width: 100%;
         height: 150px;
-        background-color: yellowgreen;
         &__upload {
-          // height: 100%;
+          height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          border-top: 1px solid $lightgray_color;
           &__field {
             display: none;
-          }
+          } 
         }
       }
     }
   }
   .hidden-destroy {
+    display: none;
+  }
+  .resetcunt {
     display: none;
   }
 
