@@ -84,23 +84,8 @@ p.sentence {
   &__images {
     border-bottom: 1px solid $lightgray_color;
     padding: 40px;
-    // &__file {
-    //   width: 620px;
-    //   height: 150px;
-    //   background-color: $gray_color;
-    //   font-size: 12px;
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    //   text-align: center;
-    //   &--file_choice {
-    //     display: none;
-    //   }
-    // }
     &__file {
       width: 620px;
-      // 
       background-color: $gray_color;
       display: flex;
       align-items: center;
