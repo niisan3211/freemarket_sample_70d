@@ -26,7 +26,7 @@ $(function(){
   lastIndex = $('.input_box__upload:last').data('index');
   fileIndex.splice(0, lastIndex);
   
-
+  // ↓ edit機能時に画面表示をリセットする際に使用する予定です
   let resetcunt = $('.input_box__upload').length;
   if (resetcunt == 1) {
     console.log("0枚");
@@ -38,6 +38,7 @@ $(function(){
     $('.input_box').addClass("resetcunt");
     $('.showing__images__file').append(nextInput(fileIndex[0]));
   }
+  // ↑ edit機能時に画面表示をリセットする際に使用する予定です
 
 
   $('.showing__images__file').on('change', '.input_box__upload', function(e){
