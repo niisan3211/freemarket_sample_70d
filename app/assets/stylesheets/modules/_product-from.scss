@@ -120,10 +120,14 @@ p.sentence {
     }
   }
   .hidden-destroy {
-    display: none;
+    // display: none;
+    visibility:hidden;
   }
   .resetcunt {
-    display: none;
+    // display: none;
+    visibility:hidden;
+    height: 0px;
+    width: 0px;
   }
 
   // ↑出品画像の部分

@@ -28,9 +28,7 @@ $(function(){
   
   // ↓ edit機能時に画面表示をリセットする際に使用する予定です
   let resetcunt = $('.input_box__upload').length;
-  if (resetcunt == 1) {
-    console.log("0枚");
-  } else if (resetcunt == 10) {
+  if (resetcunt == 10) {
     console.log("10数枚");
     $('.input_box').addClass("resetcunt");
   } else if (resetcunt < 10) {
@@ -46,6 +44,7 @@ $(function(){
     let file = e.target.files[0];
     let blobUrl = window.URL.createObjectURL(file);
     let preview_count = $('.previews__image').length;
+    console.log(preview_count);
 
     if (img = $(`img[data-index="${targetIndex}"]`)[0]) {
       img.setAttribute('src', blobUrl);
@@ -55,11 +54,13 @@ $(function(){
       fileIndex.push(fileIndex[fileIndex.length - 1] + 1);
       
       if (preview_count == 9) {
-        $('.input_box').removeClass('input_box');
+        $('.input_box').addClass('resetcunt');
+        // $('.input_box').removeClass('input_box');
         $('.fas').removeClass('fas');
         $('.fa-camera').removeClass('fa-camera');  
       } else {
         $('.input_box').removeClass('input_box');
+        // $('.input_box').removeClass('input_box');
         $('.fas').removeClass('fas');
         $('.fa-camera').removeClass('fa-camera');
         $('.showing__images__file').append(nextInput(fileIndex[0]));
@@ -70,10 +71,14 @@ $(function(){
   
   $('.showing__images__file').on('click', '.previews__image__btn', function(){
     let targetIndex = $(this).data('btn-index');
-    $(`div[data-index="${targetIndex}"].input_box__upload`).parent().remove();
+    // $(`div[data-index="${targetIndex}"].input_box__upload`).parent().remove();
     $(this).parent().remove();
     let hiddenCheck = $(`input[data-index="${targetIndex}"].hidden-destroy`);
     hiddenCheck.prop('checked', true)
     if ($('.input_box').length == 0) $('.showing__images__file').append(nextInput(fileIndex[0]));
+    
+    let preview_count = $('.previews__image').length;
+    console.log(preview_count);
+    if ($('.previews__image').length == 9) $('.showing__images__file').append(nextInput(fileIndex[0]));
   });
 });
