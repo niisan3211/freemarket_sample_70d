@@ -68,7 +68,6 @@ $(function(){
     }
   });
 
-  
   $('.showing__images__file').on('click', '.previews__image__btn', function(){
     let targetIndex = $(this).data('btn-index');
     // $(`div[data-index="${targetIndex}"].input_box__upload`).parent().remove();
@@ -77,8 +76,6 @@ $(function(){
     hiddenCheck.prop('checked', true)
     if ($('.input_box').length == 0) $('.showing__images__file').append(nextInput(fileIndex[0]));
     
-    let preview_count = $('.previews__image').length;
-    console.log(preview_count);
     if ($('.previews__image').length == 9) $('.showing__images__file').append(nextInput(fileIndex[0]));
   });
 });
