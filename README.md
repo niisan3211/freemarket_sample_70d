@@ -25,6 +25,8 @@ Things you may want to cover:
 ---------------------------------------
 ## Usersテーブル
 
+練習なり
+
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
